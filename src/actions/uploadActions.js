@@ -8,6 +8,14 @@ export const uploadImage = (data) => async (dispatch) => {
     }
 }
 
+export const uploadVideo = (data) => async (dispatch) => {
+    try {
+        await UploadApi.uploadVideo(data)
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export const uploadPost = (data) => async(dispatch) => {
 
     dispatch({type: "UPLOAD_START"})
